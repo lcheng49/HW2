@@ -1,0 +1,10 @@
+<form action="{{ url_for ('a_result')}}" method = 'POST'>
+{{form.hidden_tag()}}
+{%for message in get_flashed_messages()%}
+{{message}}<br />
+{% endfor %}
+{{form.a_name.label}}{{form.a_name()}} <br />
+{{form.options.label}}{{form.options()}}<br />
+{{form.submit()}}
+
+</form>
